@@ -320,6 +320,3 @@ Aditya Chaudhry
 Computational Materials Research Portfolio
 
 ---
-
-# 2d-bioelectronics-materials-screening
-# 2d-bioelectronics-materials-screening
