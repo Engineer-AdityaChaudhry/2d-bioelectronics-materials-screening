@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>2Dmatpedia</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127723667-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127723667-1');
+    </script>
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var sPath = window.location.pathname;
+            var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+
+            if (sPage == "") {
+                $("#li-home").addClass("active");
+            }
+            else {
+                $("#li-" + sPage).addClass("active");
+            }
+
+        });
+    </script>
+    
+
+<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.2.1/js/buttons.flash.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script src="//cdn.datatables.net/buttons/1.2.1/js/buttons.html5.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+<script src="//code.highcharts.com/highcharts.js"></script>
+<script src="//code.highcharts.com/modules/exporting.js"></script>
+
+
+    <!--<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />-->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.png"/>
+    <link rel=stylesheet type=text/css
+          href="/static/style.css">
+
+    
+<link rel=stylesheet type=text/css href="/static/index.css">
+<link rel=stylesheet type=text/css href="/static/guide.css"> 
+
+
+</head>
+<body>
+
+<div id="header">
+2D Materials Encyclopedia
+</div>
+
+<div id="navbar">
+    <div id="navbar-inner">
+        <div id="menu">
+            <ul>
+                <li id="li-home">
+                    <a href="/">home</a>
+                </li>
+                <li id="li-summary">
+                  <a href="/summary">summary</a>
+                </li>
+                <li id="li-guide">
+                  <a href="/guide">calculations guide</a>
+                </li>
+                <li id="li-about">
+                  <a href="/about">about</a>
+                </li>
+                <li id="li-download">
+                  <a href="/download">download</a>
+     	       </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+
+<h1>Download</h1>
+
+Besides the access via this web interface, you can download a copy of the whole database of material properties in a standard json file.
+
+<br/><br/>
+
+The compressed file is only a few MB large and can be download from <a href="/static/db.json.gz" onclick="gtag('event', 'download', {'event_category': 'Files', 'event_label': 'Database'})" download>here</a>.
+
+<br/><br/>
+
+Band structure data is also available for download, but the file is a few GB large, it can be download from <a href="/static/2dmatpedia_band.json.tar.gz" onclick="gtag('event', 'download', {'event_category': 'Files', 'event_label': 'Database'})" download>here</a>.
+
+ 
+</div>
+
+<div id="footer">
+Copyright 2018, <a href="http://graphene.nus.edu.sg" target="_blank">Centre for Advanced 2D Materials</a>, <a href="http://nus.edu.sg" target="_blank">National University of Singapore</a>. Web interface powered by <a href="http://guide.materialsvirtuallab.org/flamyngo/" target="_blank">flamyngo</a>.<br/><br/>
+<strong>How to cite</strong>: Zhou, J., Shen, L., Costa, M.D. et al., "2DMatPedia, an open computational database of two-dimensional materials from top-down and bottom-up approaches", Sci Data 6, 86 (2019) (<a href="https://doi.org/10.1038/s41597-019-0097-3">https://doi.org/10.1038/s41597-019-0097-3</a>)
+</div> 
+</body>
+</html>
